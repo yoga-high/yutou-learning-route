@@ -1,0 +1,41 @@
+# python list 
+# 列表的 adding and removing items
+letters = ["a", "b", "c"]
+# add
+letters.append("d")
+letters.insert(0, "-")
+
+# remove  删末尾
+letters.pop()
+# 删特定位置的元素
+letters.pop(0)
+# 删哪一个元素
+letters.remove("b")
+
+# 删除一组元素
+del letters[0:3]
+
+# find
+print(letters.index("d"))  # 返回d所在的位置，如果该元素不存在，则报错
+print(letters.count("d"))  # 返回0 则为没有
+
+
+# 排序 sort
+numbers.sort(reverse=True)  # 降序
+
+
+# sort 中的key是啥
+items = [
+    ("product1", 10),
+    ("product2", 9),
+    ("product3", 12),
+]
+
+def sort_item(item):
+    return item[1]
+
+# 更简单的方式
+items.sort(key=lambda item: item[1])
+
+items.sort(key=sort_item)
+print(items)
